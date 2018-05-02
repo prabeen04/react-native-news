@@ -14,6 +14,8 @@ import {
 import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base';
 import MyHeader from './components/header/header';
 import MyFooter from './components/footer/footer';
+import Post from './components/post/post';
+
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -26,9 +28,9 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Container>
-        <MyHeader />
+        <MyHeader/>
         <Content>
-        <Icon name="apps" />
+          <Post/>
          </Content> 
         <MyFooter/>
       </Container>

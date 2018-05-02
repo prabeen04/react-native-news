@@ -4,7 +4,6 @@ import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'nativ
 class MyHeader extends Component {
   render() {
     return (
-        <Container>
         <Header>
           <Left>
             <Button transparent>
@@ -26,7 +25,6 @@ class MyHeader extends Component {
             </Button>
           </Right>
         </Header>
-      </Container>
     )
   }
 }
