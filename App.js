@@ -11,8 +11,9 @@ import {
   Text,
   View
 } from 'react-native';
-import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
-
+import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+import MyHeader from './components/header/header';
+import MyFooter from './components/footer/footer';
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -25,26 +26,11 @@ export default class App extends Component<Props> {
   render() {
     return (
       <Container>
-        <Header />
+        <MyHeader />
         <Content>
         <Icon name="apps" />
          </Content> 
-        <Footer>
-          <FooterTab>
-            <Button>
-              <Icon name="apps" />
-            </Button>
-            <Button>
-              <Icon name="camera" />
-            </Button>
-            <Button active>
-              <Icon active name="navigate" />
-            </Button>
-            <Button>
-              <Icon name="person" />
-            </Button>
-          </FooterTab>
-        </Footer>
+        <MyFooter/>
       </Container>
     );
   }

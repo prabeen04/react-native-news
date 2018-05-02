@@ -8,7 +8,7 @@ class MyHeader extends Component {
         <Header>
           <Left>
             <Button transparent>
-              <Icon name='arrow-back' />
+              <Icon name='menu' />
             </Button>
           </Left>
           <Body>
