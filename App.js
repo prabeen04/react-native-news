@@ -26,7 +26,9 @@ export default class App extends Component<Props> {
     return (
       <Container>
         <Header />
-        <Content />
+        <Content>
+        <Icon name="apps" />
+         </Content> 
         <Footer>
           <FooterTab>
             <Button>
