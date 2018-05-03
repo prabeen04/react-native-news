@@ -46,7 +46,7 @@ class Post extends Component {
                     active={this.state.active}
                     direction="up"
                     containerStyle={{}}
-                    style={{ backgroundColor: '#5067FF' }}
+                    style={{ backgroundColor: '#5067FF'}}
                     position="bottomRight"
                     onPress={() => this.setState({ active: !this.state.active })}>
                     <Icon name="share" />
@@ -62,7 +62,7 @@ class Post extends Component {
                 </Fab>
                 {this.state.posts.map(post => {
                     return (
-                        <Card>
+                        <Card key={post._id}>
                             <CardItem header>
                                 <Text>{post.title}</Text>
                             </CardItem>

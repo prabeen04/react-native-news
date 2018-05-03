@@ -6,7 +6,7 @@ class Welcome extends Component {
     return (
       <View>
         <Text> Welcome Screen</Text>
-        <Button title='Dashboard' onPress={()=>this.props.navigation.navigate('Dashboard')} />
+        <Button title='Login' onPress={()=>this.props.navigation.navigate('Dashboard')} />
       </View>
     )
   }
