@@ -12,9 +12,9 @@ import {
   View
 } from 'react-native';
 import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base';
-import MyHeader from './components/header/header';
-import MyFooter from './components/footer/footer';
-import Post from './components/post/post';
+import MyHeader from './src/components/header/header';
+import MyFooter from './src/components/footer/footer';
+import Post from './src/components/post/post';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
