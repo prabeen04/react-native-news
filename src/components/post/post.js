@@ -66,13 +66,13 @@ class Post extends Component {
                             <CardItem header>
                                 <Text>{post.title}</Text>
                             </CardItem>
-                            <CardItem>
+                            {/* <CardItem>
                                 <Body>
                                     <Text>
                                         {post.body}
                                     </Text>
                                 </Body>
-                            </CardItem>
+                            </CardItem> */}
                             <CardItem footer>
                                 <Text>{post.author}: {post.date}</Text>
                             </CardItem>
