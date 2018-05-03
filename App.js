@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
-import { StyleSheet } from "react-native";
-import { TabNavigator } from 'react-navigation';
-import { Container, Content, Footer, FooterTab, Button, Icon } from 'native-base';
+import { Button, View, Text } from "react-native";
+import { StackNavigator } from 'react-navigation';
 import MyHeader from './src/components/header/header';
 import MyFooter from './src/components/footer/footer';
 import Post from './src/components/post/post';
-
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
-      <Container>
-        <MyHeader/>
-        <Content>
-          <Post/>
-         </Content> 
-        <MyFooter/>
-      </Container>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Home Screen</Text>
+      </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  }
+export default StackNavigator({
+  App: {
+    screen: App,
+  },
 });
