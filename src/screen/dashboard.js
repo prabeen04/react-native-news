@@ -3,6 +3,9 @@ import { TabNavigator } from "react-navigation";
 import { Button, Text, Icon, Item, Footer, FooterTab, Label } from "native-base";
 import MyHeader from '../components/header/header';
 import MyFooter from '../components/footer/footer';
+import Post from '../components/post/post';
+import Chat from '../components/chat/chat';
+import Profile from '../components/profile/profile';
 class DashBoard extends Component {
   render() {
     return (
@@ -12,8 +15,9 @@ class DashBoard extends Component {
 }
 export default (DashBoardTabNavigator = TabNavigator(
     {
-      LucyChat: { screen: props => <MyHeader {...props} /> },
-      JadeChat: { screen: props => <MyHeader {...props} /> }
+      Chat: { screen: props => <Chat {...props} /> },
+      Profile: { screen: props => <Profile {...props} /> },
+      Post: { screen: props => <Post {...props} /> }
     },
     {
       tabBarPosition: "bottom",
@@ -24,18 +28,26 @@ export default (DashBoardTabNavigator = TabNavigator(
               <Button
                 vertical
                 active={props.navigationState.index === 0}
-                onPress={() => props.navigation.navigate("MyHeader")}
+                onPress={() => props.navigation.navigate("Chat")}
               >
                 <Icon name="bowtie" />
-                <Text>Lucy</Text>
+                <Text>Chat</Text>
               </Button>
               <Button
                 vertical
                 active={props.navigationState.index === 1}
-                onPress={() => props.navigation.navigate("MyFooter")}
+                onPress={() => props.navigation.navigate("Profile")}
               >
                 <Icon name="briefcase" />
-                <Text>Nine</Text>
+                <Text>Profile</Text>
+              </Button>
+              <Button
+                vertical
+                active={props.navigationState.index === 2}
+                onPress={() => props.navigation.navigate("Post")}
+              >
+                <Icon name="briefcase" />
+                <Text>Post</Text>
               </Button>
             </FooterTab>
           </Footer>
